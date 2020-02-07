@@ -1,0 +1,127 @@
+{
+  "luis_schema_version": "4.0.0",
+  "versionId": "0.1",
+  "name": "luis-office-bot",
+  "desc": "luis office bot",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "OfficeLocation"
+    },
+    {
+      "name": "ReviewInvoice"
+    },
+    {
+      "name": "ReviewPolicy"
+    },
+    {
+      "name": "TalkToAgent"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "can i get my policy overview?",
+      "intent": "ReviewPolicy",
+      "entities": []
+    },
+    {
+      "text": "can i see my invoices?",
+      "intent": "ReviewInvoice",
+      "entities": []
+    },
+    {
+      "text": "can i see where the offices are?",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "can i talk to a human?",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "can i talk to someone?",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "get latest invoice",
+      "intent": "ReviewInvoice",
+      "entities": []
+    },
+    {
+      "text": "hey, how are you doin?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how do i get to the office?",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "i want to download my policy",
+      "intent": "ReviewPolicy",
+      "entities": []
+    },
+    {
+      "text": "i want to talk to an agent",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i would like to chat with a representative",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i would like to review my invoices",
+      "intent": "ReviewInvoice",
+      "entities": []
+    },
+    {
+      "text": "review policy",
+      "intent": "ReviewPolicy",
+      "entities": []
+    },
+    {
+      "text": "want to get some coffee?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what are my recent invoices?",
+      "intent": "ReviewInvoice",
+      "entities": []
+    },
+    {
+      "text": "what are the office locations?",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "where can i see my policy?",
+      "intent": "ReviewPolicy",
+      "entities": []
+    },
+    {
+      "text": "where's the office?",
+      "intent": "OfficeLocation",
+      "entities": []
+    }
+  ],
+  "settings": []
+}

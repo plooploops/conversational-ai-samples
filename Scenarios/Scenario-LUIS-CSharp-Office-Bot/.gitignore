@@ -1,0 +1,8 @@
+*.dll
+*.pdb
+obj/**
+bin/**
+runtimes/**
+*db.lock
+*.vs/*
+*appsettings.json.bak*
