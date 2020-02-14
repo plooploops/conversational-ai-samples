@@ -1,0 +1,132 @@
+{
+  "luis_schema_version": "4.0.0",
+  "versionId": "0.1",
+  "name": "luis-office-bot-spanish",
+  "desc": "",
+  "culture": "es-mx",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "HablarConAgente"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "UbicacionOficina"
+    },
+    {
+      "name": "VerFactura"
+    },
+    {
+      "name": "VerPolitica"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "¿como llego a la oficina?",
+      "intent": "UbicacionOficina",
+      "entities": []
+    },
+    {
+      "text": "¿cual es la ubicacion de la oficina?",
+      "intent": "UbicacionOficina",
+      "entities": []
+    },
+    {
+      "text": "¿cuales son mis facturas recientes?",
+      "intent": "VerFactura",
+      "entities": []
+    },
+    {
+      "text": "¿donde está la oficina?",
+      "intent": "UbicacionOficina",
+      "entities": []
+    },
+    {
+      "text": "¿donde puedo ver mi politica?",
+      "intent": "VerPolitica",
+      "entities": []
+    },
+    {
+      "text": "¿puedo hablar con alguien?",
+      "intent": "HablarConAgente",
+      "entities": []
+    },
+    {
+      "text": "¿puedo hablar con un humano?",
+      "intent": "HablarConAgente",
+      "entities": []
+    },
+    {
+      "text": "¿puedo ver donde hay oficinas?",
+      "intent": "UbicacionOficina",
+      "entities": []
+    },
+    {
+      "text": "¿puedo ver la reseña de mi politica?",
+      "intent": "VerPolitica",
+      "entities": []
+    },
+    {
+      "text": "¿puedo ver mis facturas?",
+      "intent": "VerFactura",
+      "entities": []
+    },
+    {
+      "text": "¿quieres un poco de café?",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "me gustaria revisar mis facturas",
+      "intent": "VerFactura",
+      "entities": []
+    },
+    {
+      "text": "obtener la ultima factura",
+      "intent": "VerFactura",
+      "entities": []
+    },
+    {
+      "text": "quiero descargar mis politicas",
+      "intent": "VerPolitica",
+      "entities": []
+    },
+    {
+      "text": "quiero hablar con un agente",
+      "intent": "HablarConAgente",
+      "entities": []
+    },
+    {
+      "text": "quiero hablar con un representante",
+      "intent": "HablarConAgente",
+      "entities": []
+    },
+    {
+      "text": "quiero una hamburguesa",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "quiero una pizza",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "revisar politica",
+      "intent": "VerPolitica",
+      "entities": []
+    }
+  ],
+  "settings": []
+}

@@ -13,6 +13,8 @@ We can utilize this [Getting Starting](https://docs.microsoft.com/en-us/azure/co
 
 ### Setup LUIS Model
 
+We have included a sample LUIS model, but we'll assume that we're going to start with a brand new one.
+
 #### Some Concepts and Design
 
 First, determine some example [Utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-utterance), [Intents](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent), and even [Entities](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types).  In this scenario, we'll start simple with some **utterances** and **intents** we'd like LUIS to detect.
