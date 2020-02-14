@@ -8,10 +8,11 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.AI.Luis;
+using System;
 
 namespace Luis
 {
-    public partial class LuisOfficeBot: IRecognizerConvert
+    public partial class LuisOfficeBot_es_mx: IRecognizerConvert
     {
         [JsonProperty("text")]
         public string Text;
@@ -21,10 +22,10 @@ namespace Luis
 
         public enum Intent {
             None,
-            OfficeLocation,
-            ReviewInvoice,
-            ReviewPolicy,
-            TalkToAgent
+            UbicacionOficina,
+            VerFactura,
+            VerPolitica,
+            HablarConAgente
         };
 
         [JsonProperty("intents")]
@@ -47,7 +48,7 @@ namespace Luis
 
         public void Convert(dynamic result)
         {
-            var app = JsonConvert.DeserializeObject<LuisOfficeBot>(JsonConvert.SerializeObject(result, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
+            var app = JsonConvert.DeserializeObject<LuisOfficeBot_es_mx>(JsonConvert.SerializeObject(result, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore }));
             Text = app.Text;
             AlteredText = app.AlteredText;
             Intents = app.Intents;

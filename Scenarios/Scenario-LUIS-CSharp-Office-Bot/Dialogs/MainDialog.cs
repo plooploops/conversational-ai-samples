@@ -67,13 +67,14 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             // Call LUIS and gather any potential booking details. (Note the TurnContext has the response to the prompt.)
             try
             {
-                var luisResult = await _luisRecognizer.RecognizeAsync<LuisOfficeBot>(stepContext.Context, cancellationToken);
+                //could switch LUIS model.  For now, using es_mx cognitive model.
+                var luisResult = await _luisRecognizer.RecognizeAsync<LuisOfficeBot_es_mx>(stepContext.Context, cancellationToken);
                 switch (luisResult.TopIntent().intent)
                 {
-                    case LuisOfficeBot.Intent.TalkToAgent:
-                    case LuisOfficeBot.Intent.ReviewPolicy:
-                    case LuisOfficeBot.Intent.ReviewInvoice:
-                    case LuisOfficeBot.Intent.OfficeLocation:
+                    case LuisOfficeBot_es_mx.Intent.HablarConAgente:
+                    case LuisOfficeBot_es_mx.Intent.VerPolitica:
+                    case LuisOfficeBot_es_mx.Intent.VerFactura:
+                    case LuisOfficeBot_es_mx.Intent.UbicacionOficina:
                         //do something for the office location
                         var checkIntentText = $"The intent was {luisResult.TopIntent().intent}";
                         var checkIntentMessage = MessageFactory.Text(checkIntentText, checkIntentText, InputHints.IgnoringInput);
