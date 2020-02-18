@@ -1,22 +1,22 @@
 {
   "luis_schema_version": "4.0.0",
   "versionId": "0.1",
-  "name": "luis-office-bot",
-  "desc": "luis office bot",
+  "name": "luis-office-bot-1",
+  "desc": "",
   "culture": "en-us",
   "tokenizerVersion": "1.0.0",
   "intents": [
+    {
+      "name": "GetInvoice"
+    },
+    {
+      "name": "GetPolicy"
+    },
     {
       "name": "None"
     },
     {
       "name": "OfficeLocation"
-    },
-    {
-      "name": "ReviewInvoice"
-    },
-    {
-      "name": "ReviewPolicy"
     },
     {
       "name": "TalkToAgent"
@@ -33,92 +33,127 @@
   "patterns": [],
   "utterances": [
     {
-      "text": "can i get my policy overview?",
-      "intent": "ReviewPolicy",
+      "text": "can i talk to a human",
+      "intent": "TalkToAgent",
       "entities": []
     },
     {
-      "text": "can i see my invoices?",
-      "intent": "ReviewInvoice",
+      "text": "can you bring an agent that i can talk to",
+      "intent": "TalkToAgent",
       "entities": []
     },
     {
-      "text": "can i see where the offices are?",
+      "text": "can you show me my policy",
+      "intent": "GetPolicy",
+      "entities": []
+    },
+    {
+      "text": "connect me to a human",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "how can i find your office",
       "intent": "OfficeLocation",
       "entities": []
     },
     {
-      "text": "can i talk to a human?",
-      "intent": "TalkToAgent",
-      "entities": []
-    },
-    {
-      "text": "can i talk to someone?",
-      "intent": "TalkToAgent",
-      "entities": []
-    },
-    {
-      "text": "get latest invoice",
-      "intent": "ReviewInvoice",
-      "entities": []
-    },
-    {
-      "text": "hey, how are you doin?",
+      "text": "how can i get a cheaper car",
       "intent": "None",
       "entities": []
     },
     {
-      "text": "how do i get to the office?",
+      "text": "how can i go to your office?",
       "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "how do i find my invoice",
+      "intent": "GetInvoice",
+      "entities": []
+    },
+    {
+      "text": "how was the movie yesterday",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i do not want to talk to a bot",
+      "intent": "TalkToAgent",
       "entities": []
     },
     {
       "text": "i want to download my policy",
-      "intent": "ReviewPolicy",
+      "intent": "GetPolicy",
       "entities": []
     },
     {
-      "text": "i want to talk to an agent",
-      "intent": "TalkToAgent",
+      "text": "i want to get my last statement",
+      "intent": "GetInvoice",
       "entities": []
     },
     {
-      "text": "i would like to chat with a representative",
-      "intent": "TalkToAgent",
-      "entities": []
-    },
-    {
-      "text": "i would like to review my invoices",
-      "intent": "ReviewInvoice",
-      "entities": []
-    },
-    {
-      "text": "review policy",
-      "intent": "ReviewPolicy",
-      "entities": []
-    },
-    {
-      "text": "want to get some coffee?",
-      "intent": "None",
-      "entities": []
-    },
-    {
-      "text": "what are my recent invoices?",
-      "intent": "ReviewInvoice",
-      "entities": []
-    },
-    {
-      "text": "what are the office locations?",
+      "text": "i want to meet someone in your office",
       "intent": "OfficeLocation",
       "entities": []
     },
     {
-      "text": "where can i see my policy?",
-      "intent": "ReviewPolicy",
+      "text": "i want to see an old invoice",
+      "intent": "GetInvoice",
       "entities": []
     },
     {
-      "text": "where's the office?",
+      "text": "i want to talk to someone",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i'd like to see my latest policy",
+      "intent": "GetPolicy",
+      "entities": []
+    },
+    {
+      "text": "i'm not able to find last year's december invoice",
+      "intent": "GetInvoice",
+      "entities": []
+    },
+    {
+      "text": "show me my latest invoice",
+      "intent": "GetInvoice",
+      "entities": []
+    },
+    {
+      "text": "tell me your office location",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "the beaches of california are the best",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "the mexican restaurants in monterrey are the best",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the best gift for my friend",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "where can i find my policy",
+      "intent": "GetPolicy",
+      "entities": []
+    },
+    {
+      "text": "where can i see my policy",
+      "intent": "GetPolicy",
+      "entities": []
+    },
+    {
+      "text": "where is the nearest office",
       "intent": "OfficeLocation",
       "entities": []
     }
