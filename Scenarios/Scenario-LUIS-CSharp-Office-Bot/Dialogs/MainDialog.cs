@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using Luis;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.Dialogs;
+using Microsoft.Bot.Builder.Dialogs.Choices;
 using Microsoft.Bot.Schema;
 using Microsoft.Extensions.Logging;
 using Microsoft.Recognizers.Text.DataTypes.TimexExpression;
@@ -67,16 +68,22 @@ namespace Microsoft.BotBuilderSamples.Dialogs
             // Call LUIS and gather any potential booking details. (Note the TurnContext has the response to the prompt.)
             try
             {
-                //could switch LUIS model.  For now, using es_mx cognitive model.
-                var luisResult = await _luisRecognizer.RecognizeAsync<LuisOfficeBot_es_mx>(stepContext.Context, cancellationToken);
+                //could switch LUIS model.  For now, using entity cognitive model.
+                var luisResult = await _luisRecognizer.RecognizeAsync<LuisOfficeBot>(stepContext.Context, cancellationToken);
                 switch (luisResult.TopIntent().intent)
                 {
-                    case LuisOfficeBot_es_mx.Intent.HablarConAgente:
-                    case LuisOfficeBot_es_mx.Intent.VerPolitica:
-                    case LuisOfficeBot_es_mx.Intent.VerFactura:
-                    case LuisOfficeBot_es_mx.Intent.UbicacionOficina:
+                    //different intents
+                    case LuisOfficeBot.Intent.TalkToAgent:
+                    case LuisOfficeBot.Intent.GetDocument:
+                    case LuisOfficeBot.Intent.GetInvoice:
+                    case LuisOfficeBot.Intent.GetPolicy:
+                    case LuisOfficeBot.Intent.OfficeLocation:
                         //do something for the office location
                         var checkIntentText = $"The intent was {luisResult.TopIntent().intent}";
+                        if (luisResult.Entities._instance.Document != null)
+                        {
+                            checkIntentText += $" and the entity type is {luisResult.Entities._instance.Document.SingleOrDefault().Type} and the entity text is {luisResult.Entities._instance.Document.SingleOrDefault().Text}";
+                        }
                         var checkIntentMessage = MessageFactory.Text(checkIntentText, checkIntentText, InputHints.IgnoringInput);
                         await stepContext.Context.SendActivityAsync(checkIntentMessage, cancellationToken);
                         break;
