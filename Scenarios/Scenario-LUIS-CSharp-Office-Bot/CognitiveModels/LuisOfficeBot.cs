@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using System.Collections.Generic;
 using Microsoft.Bot.Builder;
 using Microsoft.Bot.Builder.AI.Luis;
+using CoreBot.Sample_Models;
 
 namespace Luis
 {
@@ -22,19 +23,30 @@ namespace Luis
         public enum Intent {
             None,
             OfficeLocation,
-            ReviewInvoice,
-            ReviewPolicy,
+            GetDocument,
+            GetInvoice,
+            GetPolicy,
             TalkToAgent
         };
 
+        public class Entity
+        {
+            public int endIndex { get; set; }
+            public string entity { get; set; }
+            public float score { get; set; }
+            public int startIndex { get; set; }
+            public string type { get; set; }
+        }
+
         [JsonProperty("intents")]
         public Dictionary<Intent, IntentScore> Intents;
-
+        
         public class _Entities
         {
             // Instance
             public class _Instance
             {
+                public InstanceData[] Document;
             }
             [JsonProperty("$instance")]
             public _Instance _instance;
