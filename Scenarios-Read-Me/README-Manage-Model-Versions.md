@@ -91,6 +91,10 @@ For example, we can add an intent to the intents array:
     ...
 ```
 
+Or we can even add in entities ([importing a LUIS Model version](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/luis-concept-app-iteration#import-and-export-a-version) with an [Entities Sample](../Scenarios/Scenario-LUIS-CSharp-Office-Bot/Sample-Models/luis-office-bot_vLOB-Intents-Entities-0.1.json)).
+
+> In this case, we can capture not only **intents**, but also **entities** which will help provide additional guidance for the intent.
+
 Now that we have the changes, we can take a few different approaches.
 
 #### Publish Manually
@@ -104,6 +108,15 @@ Notice that if we select a new version, then the model will be shown as active.
 However, we would still need to publish the LUIS model to a [Publish Slot](https://docs.microsoft.com/en-us/azure/cognitive-services/LUIS/luis-concept-app-iteration#publishing-slots).  From the doc:
 
 > You can publish to either the stage and/or production slots. Each slot can have a different version or the same version. This is useful for verifying changes before publishing to production, which is available to bots or other LUIS calling apps.  Trained versions aren't automatically available at your LUIS app's endpoint. You must publish or republish a version in order for it to be available at your LUIS app endpoint.
+
+Suppose we're using the new version of the model that we have imported.
+
+It's also worth revisiting the **test console** in the LUIS portal to compare the imported version results with the one that is already published.
+
+![Test Console For Model](../Media/Scenario-Manage-Model-Versions/scenario-4.1.png)
+
+Click on compare with published.
+![Compare with Production](../Media/Scenario-Manage-Model-Versions/scenario-4.png)
 
 #### Publish Automatically (An Approach)
 
