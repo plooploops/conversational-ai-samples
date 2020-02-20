@@ -1,0 +1,46 @@
+[
+    {
+      "text": "can I get my last pay slip?",
+      "intent": "GetDocument",
+      "entities": 
+      [
+          {
+              "entity": "document",
+              "startPos": 18,
+              "endPos": 25
+          }
+      ]
+    },
+    {
+        "text": "can I see my last invoice?",
+        "intent": "GetDocument",
+        "entities": 
+        [
+            {
+                "entity": "document",
+                "startPos": 18,
+                "endPos": 24
+            }
+        ]
+    },
+    {
+        "text": "where's the office?",
+        "intent": "OfficeLocation",
+        "entities": []
+    },
+    {
+        "text": "I want to talk to someone?",
+        "intent": "TalkToAgent",
+        "entities": []
+    },
+    {
+        "text": "Can I order a pizza?",
+        "intent": "None",
+        "entities": []
+    },
+    {
+        "text": "Show me a pizza",
+        "intent": "None",
+        "entities": []
+    }
+]
