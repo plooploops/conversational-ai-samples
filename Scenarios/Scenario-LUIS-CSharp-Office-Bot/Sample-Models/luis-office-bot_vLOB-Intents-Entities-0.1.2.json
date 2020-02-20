@@ -1,0 +1,295 @@
+{
+  "luis_schema_version": "4.0.0",
+  "versionId": "LOB-Intents-Entities-0.1.2",
+  "name": "luis-office-bot-1",
+  "desc": "",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "GetDocument"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "OfficeLocation"
+    },
+    {
+      "name": "TalkToAgent"
+    }
+  ],
+  "entities": [
+    {
+      "name": "document",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "can i get my latest policy",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 20,
+          "endPos": 25
+        }
+      ]
+    },
+    {
+      "text": "can i speak with someone",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "can i talk to a human",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "can you bring an agent that i can talk to",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "closest office",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "connect me to a human",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "do you speak human",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "download statement",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 9,
+          "endPos": 17
+        }
+      ]
+    },
+    {
+      "text": "find my last invoice",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 13,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "get my policy",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 7,
+          "endPos": 12
+        }
+      ]
+    },
+    {
+      "text": "how can i find your office",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "how can i get a cheaper car",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "how can i go to your office?",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "how do i find my invoice",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 17,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "how was the movie yesterday",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "i do not want to talk to a bot",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i want to chat with a person",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i want to download my policy",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 22,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "i want to get my last statement",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 22,
+          "endPos": 30
+        }
+      ]
+    },
+    {
+      "text": "i want to meet someone in your office",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "i want to see an old invoice",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 21,
+          "endPos": 27
+        }
+      ]
+    },
+    {
+      "text": "i want to speak to a manager",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i want to talk to someone",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "i'm not able to find last year's december invoice",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 42,
+          "endPos": 48
+        }
+      ]
+    },
+    {
+      "text": "office location",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "offices near me",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "show me my pay slip",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 11,
+          "endPos": 18
+        }
+      ]
+    },
+    {
+      "text": "show me my statement",
+      "intent": "GetDocument",
+      "entities": [
+        {
+          "entity": "document",
+          "startPos": 11,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "speak to a representative",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "talk to a human",
+      "intent": "TalkToAgent",
+      "entities": []
+    },
+    {
+      "text": "tell me your office location",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "the beaches of california are the best",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "the mexican restaurants in monterrey are the best",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the best gift for my friend",
+      "intent": "None",
+      "entities": []
+    },
+    {
+      "text": "what's the closest office near me",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "where is the nearest office",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "where is the nearest office",
+      "intent": "OfficeLocation",
+      "entities": []
+    },
+    {
+      "text": "where's the office",
+      "intent": "OfficeLocation",
+      "entities": []
+    }
+  ],
+  "settings": []
+}
