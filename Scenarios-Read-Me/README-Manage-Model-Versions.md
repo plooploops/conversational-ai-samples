@@ -159,7 +159,7 @@ We can run training.
 We can also show how the training is proceeding.
 ![Show Model Training Progress](../Media/Scenario-Manage-Model-Versions/scenario-6.2.png)
 
-We can check in the [Luis Portal](https://luis.ai) to see that the model was imported and now trained.
+We can check in the [LUIS Portal](https://luis.ai) to see that the model was imported and now trained.
 
 ![Check Model Training Status in Portal](../Media/Scenario-Manage-Model-Versions/scenario-6.3.png)
 
