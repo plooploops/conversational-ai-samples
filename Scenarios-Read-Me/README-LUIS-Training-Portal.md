@@ -9,6 +9,7 @@ We can utilize this [Getting Starting](https://docs.microsoft.com/en-us/azure/co
 1. [Intents](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent)
 1. [Utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-utterance)
 1. [Entities](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-entity-types)
+1. [Entity Types](https://github.com/MicrosoftDocs/azure-docs/blob/eb9f22d8f59908eb4eccdb21392aaab45a8e4a7f/articles/cognitive-services/LUIS/luis-concept-data-extraction.md)
 1. [LUIS Development Lifecycle](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-app-iteration)
 
 ### Setup LUIS Model

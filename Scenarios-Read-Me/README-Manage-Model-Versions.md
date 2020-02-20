@@ -122,13 +122,81 @@ Click on compare with published.
 
 Going back to the idea that we have files, we could look into CI/CD as well assuming that we have appropriate agent connectivity, testing, and source control.
 
-> This would be a much more involved approach, but would be more representative of a production scenario.  We'll look at a possible key step that will help this scenario work.
+> This would be a much more involved approach, but would be more representative of a production scenario.  We'll look at a possible key step that will help this scenario work.  This approach could also involve other SDKs or APIs, but of course this depends on familiarity and validating that the underlying calls will work. 
 
-We could use the [Bot Framework CLI](https://github.com/microsoft/botframework-cli) and test this first locally with the file, but ultimately this could live in a script task that runs on an agent that will deploy built artifacts (e.g. Azure DevOps build / release pipelines)
+As a test, we could use the [Bot Framework CLI](https://github.com/microsoft/botframework-cli) and test this first locally with the file, but ultimately this could live in a script task that runs on an agent that will deploy built artifacts (e.g. Azure DevOps build / release pipelines)
+
+For example, suppose we update the **VersionId** in the JSON file as part a change in the model.
+
+![Update VersionId in File](../Media/Scenario-Manage-Model-Versions/scenario-5.png)
+
+Next, we can use a [Bot Framework CLI](https://github.com/microsoft/botframework-cli) to import the model from a file.
 
 ```powershell
-bf luis:version:import --endpoint {ENDPOINT} --subscriptionKey {SUBSCRIPTION_KEY} --appId
-  {APP_ID} --in {PATH_TO_JSON} --versionId {VERSION_ID}
+bf luis:version:import --endpoint $location --subscriptionKey $subKey --appId $appId --in $modelFilePath --versionId $versionId
 ```
 
-This approach could also involve other SDKs or APIs, but of course this depends on familiarity and validating that the underlying calls will work. 
+We can run this command to import the model.
+![Import Model with BF Cli](../Media/Scenario-Manage-Model-Versions/scenario-5.0.png)
+
+We can now check to see the model was imported in the portal as well by looking at the versions for the model.
+![Import Model Validate in Portal](../Media/Scenario-Manage-Model-Versions/scenario-5.1.png)
+
+
+After importing the model, we'll need to make sure to train the model.
+![Need to Train Model](../Media/Scenario-Manage-Model-Versions/scenario-6.png)
+
+We can see this in two steps - run and show.
+
+```powershell
+bf luis:train:run --endpoint $location --subscriptionKey $subKey --appId $appId --versionId $versionId
+bf luis:train:show --endpoint $location --subscriptionKey $subKey --appId $appId --versionId $versionId
+```
+
+We can run training.
+![Begin Training Model](../Media/Scenario-Manage-Model-Versions/scenario-6.1.png)
+
+We can also show how the training is proceeding.
+![Show Model Training Progress](../Media/Scenario-Manage-Model-Versions/scenario-6.2.png)
+
+We can check in the [Luis Portal](https://luis.ai) to see that the model was imported and now trained.
+
+![Check Model Training Status in Portal](../Media/Scenario-Manage-Model-Versions/scenario-6.3.png)
+
+Once satisfied with training, we can then look into publishing the model.  We can publish to staging slot as a starting point.
+
+```powershell
+bf luis:application:publish --endpoint $location --subscriptionKey $subKey --versionId $versionId --appId $appId --staging
+```
+
+![Model Publish in Staging Slot](../Media/Scenario-Manage-Model-Versions/scenario-6.4.png)
+
+We can also send some sample queries to LUIS to validate that we're getting expected results.
+
+> While we can use **luis:application:query**, it looks like as of now, **batch testing** with LUIS is not yet available.
+
+```powershell
+bf luis:application:query --endpoint $location --subscriptionKey $subKey --appId $appId --query "Can you share with my last pay slip" --staging
+```
+
+![Model Publish in Staging Slot](../Media/Scenario-Manage-Model-Versions/scenario-6.4.1.png)
+
+If needed, we could script various tests to run against the staging slot, and this could roll up as part of the pipeline.
+
+If we're satisified with the performance of the LUIS model, we can also publish the model to the production slot.
+
+```powershell
+bf luis:application:publish --endpoint $location --subscriptionKey $subKey --versionId $versionId --appId $appId
+```
+
+![Model Publish in Production Slot](../Media/Scenario-Manage-Model-Versions/scenario-6.5.png)
+
+Again, we could also run the queries to validate that the production slot works.
+
+> Again, batch testing could also be used (and isn't yet available right now with **bf cli**), but this will could be used as part of an end to end test as well.
+
+```powershell
+bf luis:application:query --endpoint $location --subscriptionKey $subKey --appId $appId --query "Can you share with my last pay slip" 
+```
+
+![Model Publish in Production Slot](../Media/Scenario-Manage-Model-Versions/scenario-6.5.1.png)
