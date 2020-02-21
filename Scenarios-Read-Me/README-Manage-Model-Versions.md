@@ -166,7 +166,7 @@ We can check in the [LUIS Portal](https://luis.ai) to see that the model was imp
 Once satisfied with training, we can also test the model.
 > This is will allow us to test against the model before publishing.  We'll borrow the batch testing file as input.
 
-For convenience, this is wrapped in the [sample batch file test script](..\Scenarios\Scenario-LUIS-CSharp-Office-Bot\Sample-Scripts\SampleTestFile.ps1).
+For convenience, this is wrapped in the [sample batch file test script](../Scenarios/Scenario-LUIS-CSharp-Office-Bot/Sample-Scripts/SampleTestFile.ps1).
 
 Be sure to supply values in the script as appropiate for testing the version of the model that we had just imported.
 
@@ -178,7 +178,7 @@ $versionId = "" #set to LUIS Version Id
 $batchFilePath = "" #set to file path for the Batch Test File
 ```
 
-If we run the script in the location where the host can reach [Get-LUISResult](..\Scenarios\Scenario-LUIS-CSharp-Office-Bot\Sample-Scripts\Get-LUISResult.ps1), the input batch test file (see this [sample batch test](..\Scenarios\Scenario-LUIS-CSharp-Office-Bot\Sample-Batch-Tests\luis-office-bot-batch-test.json)), and we have supplied the appropriate credentials and have network access, we should be able to see results that reflect the queries against the LUIS model.
+If we run the script in the location where the host can reach [Get-LUISResult](../Scenarios/Scenario-LUIS-CSharp-Office-Bot/Sample-Scripts/Get-LUISResult.ps1), the input batch test file (see this [sample batch test file](../Scenarios/Scenario-LUIS-CSharp-Office-Bot/Sample-Batch-Tests/luis-office-bot-batch-test.json)), and we have supplied the appropriate credentials and have network access, we should be able to see results that reflect the queries against the LUIS model.
 
 ![Check Model Before Publish with Batch Testing Script](../Media/Scenario-Manage-Model-Versions/scenario-6.3.1.png)
 
