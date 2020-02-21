@@ -175,7 +175,28 @@ We can check in the [LUIS Portal](https://luis.ai) to see that the model was imp
 
 ![Check Model Training Status in Portal](../Media/Scenario-Manage-Model-Versions/scenario-6.3.png)
 
-Once satisfied with training, we can then look into publishing the model.  We can publish to staging slot as a starting point.
+Once satisfied with training, we can also test the model.
+> This is will allow us to test against the model before publishing.  We'll borrow the batch testing file as input.
+
+For convenience, this is wrapped in the [sample batch file test script](..\Scenarios\Scenario-LUIS-CSharp-Office-Bot\Sample-Scripts\SampleTestFile.ps1).
+
+Be sure to supply values in the script as appropiate for testing the version of the model that we had just imported.
+
+```powershell
+$location = "westus" #set to LUIS endpoint host
+$subscriptionKey = "" #set to LUIS App Key
+$appId = "" #set to LUIS App Id
+$versionId = "" #set to LUIS Version Id
+$batchFilePath = "" #set to file path for the Batch Test File
+```
+
+If we run the script in the location where the host can reach [Get-LUISResult](..\Scenarios\Scenario-LUIS-CSharp-Office-Bot\Sample-Scripts\Get-LUISResult.ps1), the input batch test file (see this [sample batch test](..\Scenarios\Scenario-LUIS-CSharp-Office-Bot\Sample-Batch-Tests\luis-office-bot-batch-test.json)), and we have supplied the appropriate credentials and have network access, we should be able to see results that reflect the queries against the LUIS model.
+
+![Check Model Before Publish with Batch Testing Script](../Media/Scenario-Manage-Model-Versions/scenario-6.3.1.png)
+
+> From an automation standpoint, we can also look into including additional tests in a test suite that we can run on the model in our CI/CD pipelines.  This can be something that is revisited by the team and also later be updated based on results seen in live usage for LUIS.
+
+We can then look into publishing the model.  We can publish to staging slot as a starting point.
 
 ```powershell
 bf luis:application:publish --endpoint $location --subscriptionKey $subKey --versionId $versionId --appId $appId --staging
