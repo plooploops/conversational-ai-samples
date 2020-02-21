@@ -122,18 +122,6 @@ Click on compare with published.
 
 Going back to the idea that we have files, we could look into CI/CD as well assuming that we have appropriate agent connectivity, testing, and source control.
 
-<<<<<<< HEAD
-> This would be a much more involved approach, but would be more representative of a production scenario.  We'll look at a possible key step that will help this scenario work.
-
-We could use the [Bot Framework CLI](https://github.com/microsoft/botframework-cli) and test this first locally with the file, but ultimately this could live in a script task that runs on an agent that will deploy built artifacts (e.g. Azure DevOps build / release pipelines)
-
-```powershell
-bf luis:version:import --endpoint {ENDPOINT} --subscriptionKey {SUBSCRIPTION_KEY} --appId
-  {APP_ID} --in {PATH_TO_JSON} --versionId {VERSION_ID}
-```
-
-This approach could also involve other SDKs or APIs, but of course this depends on familiarity and validating that the underlying calls will work. 
-=======
 > This would be a much more involved approach, but would be more representative of a production scenario.  We'll look at a possible key step that will help this scenario work.  This approach could also involve other SDKs or APIs, but of course this depends on familiarity and validating that the underlying calls will work. 
 
 As a test, we could use the [Bot Framework CLI](https://github.com/microsoft/botframework-cli) and test this first locally with the file, but ultimately this could live in a script task that runs on an agent that will deploy built artifacts (e.g. Azure DevOps build / release pipelines)
@@ -233,4 +221,3 @@ bf luis:application:query --endpoint $location --subscriptionKey $subKey --appId
 ```
 
 ![Model Publish in Production Slot](../Media/Scenario-Manage-Model-Versions/scenario-6.5.1.png)
->>>>>>> ca573ba315df115a9daa16f9bbffac06e942a604
