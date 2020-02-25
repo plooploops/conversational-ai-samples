@@ -36,6 +36,7 @@ Function Get-LUISResult
         [String]$subscriptionKey
     )
 
+
     $scheme = 'https'
     $url_format = "{0}://$location.api.cognitive.microsoft.com/luis/webapi/v2.0/apps/$appId/versions/$versionId/predict?{1}"
     $qs_data = @{
@@ -44,6 +45,7 @@ Function Get-LUISResult
         'multiple-intents' = 'true';
     }
 
+    ##adapted from: https://www.programming-books.io/essential/powershell/encode-query-string-with-uri-escapedatastring-412ca93cd6794867854b76dd646dda23
     [System.Collections.ArrayList] $qs_array = @()
     foreach ($qs in $qs_data.GetEnumerator()) {
         $qs_key = [uri]::EscapeDataString($qs.Name)
@@ -53,6 +55,7 @@ Function Get-LUISResult
 
     $url = $url_format -f @([uri]::"UriScheme${scheme}", ($qs_array -join '&'))
 
+    ##https://www.daniellittle.xyz/calling-a-rest-json-api-with-powershell
     $result = Invoke-RestMethod -Method Get -Uri $url -Header @{ "Ocp-Apim-Subscription-Key" = $subscriptionKey }
     return $result
 }

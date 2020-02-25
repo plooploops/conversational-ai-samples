@@ -34,8 +34,8 @@ $json = Get-Content $batchFilePath
 $testObjects = $json | ConvertFrom-Json
 $sb = [System.Text.StringBuilder]::new()
 
-##adapted from: https://www.programming-books.io/essential/powershell/encode-query-string-with-uri-escapedatastring-412ca93cd6794867854b76dd646dda23
 ##https://powershellexplained.com/2017-11-20-Powershell-StringBuilder/
+
 foreach ($testObject in $testObjects){
     $text = $testObject.text
     $expectedIntent = $testObject.intent
