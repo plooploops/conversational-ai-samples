@@ -6,4 +6,3 @@ runtimes/**
 *db.lock
 *.vs/*
 *appsettings.json.bak*
-*appsettings.json*
