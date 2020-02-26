@@ -6,4 +6,4 @@ runtimes/**
 *db.lock
 *.vs/*
 *appsettings.json.bak*
-*publish.cmd*
+*publish.cmd.bak
