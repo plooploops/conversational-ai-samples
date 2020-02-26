@@ -5,5 +5,4 @@ bin/**
 runtimes/**
 *db.lock
 *.vs/*
-*appsettings.json.bak
-*publish.cmd.bak
+*.bak
