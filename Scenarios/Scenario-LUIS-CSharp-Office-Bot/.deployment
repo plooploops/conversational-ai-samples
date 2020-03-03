@@ -1,2 +1,2 @@
 [config]
-command = deploy.cmd
+SCM_SCRIPT_GENERATOR_ARGS=--aspNetCore "CoreBot.csproj"

@@ -9,6 +9,7 @@ The main concept here from the [LUIS Best Practices Guidance](https://docs.micro
 
 ### Helpful Links
 1. [Getting Started With LUIS](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/get-started-portal-build-app)
+1. [Tutorial for LUIS with C# Bot Framework](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-csharp-tutorial-bf-v4)
 1. [LUIS Best Practices Guidance](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-best-practices#do-leverage-the-suggest-feature-for-active-learning)
 1. [Intents](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-intent)
 1. [Utterances](https://docs.microsoft.com/en-us/azure/cognitive-services/luis/luis-concept-utterance)
@@ -34,7 +35,7 @@ For example, suppose we want to detect some intents like location, get invoice, 
 
 ![Design Intents](../Media/Scenario-Manage-Model-Versions/scenario.png)
 
-It would also be helpful to think about representative utterances (e.g. this is what a user will send to a LUIS model through a chatbot) to populate the LUIS model.  We can use these utterances when we create the LUIS model.
+It would also be helpful to think about representative utterances (e.g. this is what a user will send to a LUIS model through a chatbot) to populate the LUIS model.  We can use these utterances when we create the LUIS model
 
 #### Some Concepts and Design
 
