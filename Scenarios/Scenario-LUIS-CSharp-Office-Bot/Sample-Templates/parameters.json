@@ -1,0 +1,54 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "botId": {
+            "value": "mybot123213"
+        },
+        "location": {
+            "value": "West US"
+        },
+        "sku": {
+            "value": "S1"
+        },
+        "kind": {
+            "value": "sdk"
+        },
+        "siteName": {
+            "value": "mybot31212"
+        },
+        "appId": {
+            "value": ""
+        },
+        "appSecret": {
+            "value": ""
+        },
+        "zipUrl": {
+            "value": "https://bot-framework.azureedge.net/static/108568-dab6ba9787/bot-packages/v1.3.27-106162/csharp-abs-webapp-v4_basic_precompiled.zip"
+        },
+        "useAppInsights": {
+            "value": true
+        },
+        "appInsightsLocation": {
+            "value": "East US"
+        },
+        "serverFarmLocation": {
+            "value": "West US"
+        },
+        "serverFarmSku": {
+            "value": {
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": 1
+            }
+        },
+        "endpoint": {
+            "value": ""
+        },
+        "luisAccountName": {
+            "value": null
+        }
+    }
+}
