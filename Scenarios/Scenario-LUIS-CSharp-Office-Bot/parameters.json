@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "channels_WebChatChannel_enablePreview": {
+            "value": null
+        },
+        "sites_luis_csharp_bot_213_name": {
+            "value": null
+        },
+        "serverfarms_luis_csharp_bot_213_name": {
+            "value": null
+        },
+        "botServices_luis_csharp_bot_213_name": {
+            "value": null
+        },
+        "components_luis_csharp_bot_21375nv5c_name": {
+            "value": null
+        },
+        "accounts_luis_csharp_bot_213_name": {
+            "value": null
+        }
+    }
+}
