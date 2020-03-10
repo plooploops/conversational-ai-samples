@@ -1,0 +1,54 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AdaptiveCards" Version="1.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.Bot.Builder.Dialogs" Version="4.4.5" />
+    <PackageReference Include="Microsoft.Bot.Builder.Integration.AspNet.Core" Version="4.4.3" />
+    <PackageReference Include="QnA_Interactive" Version="1.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Bots\MainBotStrings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>MainBotStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dialogs\QnA\QnADialogStrings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>QnADialogStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Update="Dialogs\Root\RootStrings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>RootStrings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+    <ItemGroup>
+    <Content Update="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="Bots\MainBotStrings.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>MainBotStrings.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Dialogs\QnA\QnADialogStrings.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>QnADialogStrings.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="Dialogs\Root\RootStrings.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>RootStrings.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+</Project>
